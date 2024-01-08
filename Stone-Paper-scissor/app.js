@@ -65,12 +65,3 @@ choices.forEach((choice) => {
         playgame(userchoice)
     }) 
 });
-
-
-
-
-
-
-
-
-        
