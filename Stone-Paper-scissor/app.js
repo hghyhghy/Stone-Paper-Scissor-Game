@@ -35,7 +35,6 @@ const showwinner = ( userwin , userchoice , compchoice ) =>
         msg.innerText = `Oh ! You loose yourchoice = ${userchoice}, compchoice = ${compchoice}` 
         msg.style.backgroundColor = "red"
 
-
     }
 }
 const playgame = (userchoice) => {
@@ -45,33 +44,33 @@ const playgame = (userchoice) => {
     if ( userchoice === compchoice) {
         drawgame()
     } else {
-
-        let userwin  = true
-
-        if ( userchoice === "rock") {
-
+              let userwin  = true
+             if ( userchoice === "rock") {
             userwin = compchoice === "paper" ? false : true;
-
         } else if ( userchoice === "paper") 
+
         {
                 userwin = compchoice === "scissors" ? false : true ;
-
         }  else {
-
             userwin = compchoice === "rock" ? false : true ;
         }
-
         showwinner(userwin , userchoice , compchoice)
-
     }
-
 };
 // accessing the individual div
 choices.forEach((choice) => {   
-
     choice.addEventListener( "click" , ()=> {
-        
+
         const userchoice= choice .getAttribute ("id")
         playgame(userchoice)
     }) 
 });
+
+
+
+
+
+
+
+
+        
